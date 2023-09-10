@@ -16,20 +16,21 @@
 
   <div class="container my-3 text-center ">
     <h1 class="text-uppercase mb-5">Calcola il prezzo del tuo biglietto</h1>
-    <form action="">
+    <div id="ticket-generator" class="">
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col-3">
             <label for="name" class="form-label ">Nome e Cognome</label>
             <input type="text" class="form-control" id="name">
           </div>
-          <div class="col">
+          <div class="col-3">
             <label for="km" class="form-label ">Km da percorrere</label>
             <input type="text" class="form-control" id="km">
           </div>
-          <div class="col">
+          <div class="col-3">
             <label for="age" class="form-label ">Fascia d'età</label>
-            <select name="" id="age" class="form-select  " placeholder="Seleziona la tua età">
+            <select name="" id="age" class="form-select">
+              <option value=""disabled selected hidden>Seleziona la tua fascia d'età</option>
               <option value="adult">Maggiorenne</option>
               <option value="under">Minorenne</option>
               <option value="over">Over 65</option>
@@ -39,11 +40,42 @@
       </div>
 
       <div class="mt-5">
-        <button class="btn btn-primary" type="submit">Genera</button>
-        <button class="btn btn-warning" type="reset">Annulla</button>
+        <button class="btn btn-primary generator-button" type="submit">Genera</button>
+        <button class="btn btn-warning reset-button" type="reset">Annulla</button>
       </div>
      
-    </form>
+    </div>
+  </div>
+
+  <div id="appare" class="container my-3 d-none">
+    <h2 class="text-uppercase text-center">Il tuo biglietto</h2>
+    <div id="ticket">
+      <div class="container">
+        <h3 class="text-uppercase my-3">Dettaglio passeggeri</h3>
+        <div class="row border">
+          <div class="col-4">
+            <h4>Nome passeggero</h4>
+            <span></span>
+          </div>
+          <div class="col">
+            <h4>Offerta</h4>
+            <span></span>
+          </div>
+          <div class="col">
+            <h4>Carrozza</h4>
+            <span></span>
+          </div>
+          <div class="col">
+            <h4>Codice CP</h4>
+            <span></span>
+          </div>
+          <div class="col">
+            <h4>Costo Biglietto</h4>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
 
